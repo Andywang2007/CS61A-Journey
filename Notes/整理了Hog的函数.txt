@@ -1,0 +1,14 @@
+dice() 扔一次筛子，返回结果
+roll_dice(num_rolls, dice=six_sided) 给出投的次数和筛子形状，返回最后总的结果
+boar_brawl(player_score, opponent_score) 一个策略，当不扔筛子时进行的规则运算，返回当前玩家操作后的总结果
+take turn (num_rolls, player_score, opponent_score, dice=six_sided) 返回结果，基于玩家所选择扔的次数和对手的点数
+simple_update(num_rolls, player_score, opponent_score, dice=sixe_sided),返回当前玩家的值，基于扔的次数和当前点数，忽略susfuss
+suspoint(score)返回值如果玩家采用susfuss 
+sus_update(num_rolls, player_score, opponent_score, dice=sixe_sided)返回基于玩家所选的投掷次数，操作后，再进行susfuss判断，返回后的值
+strategyfunction是输入两个分数，返回现在玩家会投出的筛子次数
+strategy0(score0, score1) 代表0玩家的strategy
+always_roll_5(score, opponent_score)一个策略：每次只扔五个筛子，无论什么情况，返回5
+update(num_rolls, score0, score1, dice) 给出扔出的次数，双方分数，返回两人的分数
+always_roll(n) 一个函数，返回一个strategy，无论输入什么，只会返回n次
+catchup: 一个strategy，一直扔五次除非对手有更高的分数，然后扔六次
+is_always_roll(strategy, goal) 返回是否这个strategy一直选择相同的筛子去投掷对于任何可能的结合
